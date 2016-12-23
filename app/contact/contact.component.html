@@ -1,0 +1,31 @@
+<h2>Contact Reactive Form</h2>
+
+
+<form  (ngSubmit)="submitForm()" [formGroup]="contactForm" novalidate>
+  <legend>Form title</legend>
+
+  <div class="form-group">
+    <label for="">label</label>
+    <input type="text" class="form-control" id="" placeholder="Input field">
+  </div>
+
+  
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+<div class="form-value">
+  Form value:
+  <pre>
+    {{contactForm.value | json}}
+  </pre>
+  <p>
+    Status: {{contactForm.status}}
+  </p>
+  <p>
+    Valid: {{contactForm.valid}}
+  </p>
+  <p>Submit then open console to see full form.</p>
+</div>
+
