@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecommendedToursComponent implements OnInit {
     constructor() { }
+    list:Array<any>=new Array<any>();
 
-    ngOnInit() { }
+
+    ngOnInit() {
+        for(let i=0;i<5;i++)
+        this.list.push({});
+     }
 }
