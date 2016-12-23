@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { ThemeModule } from './theme';
+import { TourModule } from './tour/tour.module';
 
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
@@ -32,6 +33,7 @@ import { ContactComponent } from './contact/contact.component';
     ReactiveFormsModule,
     HttpModule,
     ThemeModule,
+    TourModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
   providers: [
