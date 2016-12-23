@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 
-import { HeaderComponent }   from './header';
+import { HeaderComponent } from './header';
+import { FooterComponent } from './footer';
 
 @NgModule({
     imports: [],
-    exports: [],
-    declarations: [HeaderComponent],
+    exports: [HeaderComponent, FooterComponent],
+    declarations: [HeaderComponent, FooterComponent],
     providers: [],
 })
 export class ThemeModule { }
