@@ -1,18 +1,26 @@
 <article class="box">
   <figure>
-    <a href="ajax/slideshow-popup.html" class="hover-effect popup-gallery"><img width="270" height="160" alt="" src="http://placehold.it/270x160"></a>
+    <a href="#" class="hover-effect">
+      <img [src]="tour.thumbPhotoUrl" alt="">
+    </a>
   </figure>
   <div class="details">
-    <span class="price"><small>avg/night</small>$360</span>
-    <h4 class="box-title">Hotel Hilton<small>Paris france</small></h4>
-    <div class="feedback">
-      <div data-placement="bottom" data-toggle="tooltip" class="five-stars-container" title="4 stars"><span style="width: 80%;" class="five-stars"></span></div>
-      <span class="review">270 reviews</span>
+    <span class="price">{{tour.price | currency}}</span>
+    <h4 class="box-title">{{tour.tourName}}</h4>
+    <hr>
+    <ul class="features check">
+      <li>City Tour In 3 Hours</li>
+      <li>Enjoy World Famous Restaurant</li>
+      <li>Wine Tester Trips</li>
+      <li>Night Street Life in Downtown </li>
+    </ul>
+    <hr>
+    <div class="text-center">
+      <div class="time">
+        <i class="soap-icon-clock yellow-color"></i>
+        <span>{{tour.startDate|date:'dd MMM yyyy'}} - {{tour.endDate|date:'dd MMM yyyy'}}</span>
+      </div>
     </div>
-    <p class="description">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam.</p>
-    <div class="action">
-      <a class="button btn-small" href="hotel-detailed.html">SELECT</a>
-      <a class="button btn-small yellow popup-map" href="#" data-box="48.856614, 2.352222">VIEW ON MAP</a>
-    </div>
+    <a href="#" class="button btn-small full-width">BOOK NOW</a>
   </div>
 </article>

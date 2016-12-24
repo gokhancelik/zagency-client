@@ -8,6 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { ThemeModule } from './theme';
 import { TourModule } from './tour/tour.module';
+import { SharedModule } from './shared';
 
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
@@ -34,12 +35,13 @@ import { ContactComponent } from './contact/contact.component';
     HttpModule,
     ThemeModule,
     TourModule,
+    SharedModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
   providers: [
     GithubService
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 

@@ -1,8 +1,6 @@
 <h2>Travelers Choice of Tours</h2>
-<div class="image-carousel style2 flexslider" data-animation="slide" data-item-width="270" data-item-margin="30">
-  <ul class="slides image-box hotel listing-style1">
-    <li *ngFor="let item of list">
-      <za-tour-detailed></za-tour-detailed>
-    </li>
-  </ul>
+<div class="row add-clearfix image-box style1 tour-locations">
+  <div class="col-md-3" *ngFor="let item of list">
+    <za-tour-detailed [tour]='item'></za-tour-detailed>
+  </div>
 </div>

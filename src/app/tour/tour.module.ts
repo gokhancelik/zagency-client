@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared';
 
 import { TourDetailedComponent, TourSimpleComponent } from './components';
-import { RecommendedToursComponent, TravellersChoiceToursComponent } from './lists';
+import { RecommendedToursComponent, TravellersChoiceToursComponent, FlexSlider } from './lists';
 
 @NgModule({
-    imports: [],
+    imports: [CommonModule, SharedModule],
     exports: [TourDetailedComponent, TourSimpleComponent,
         TravellersChoiceToursComponent, RecommendedToursComponent],
     declarations: [TourDetailedComponent, TourSimpleComponent,
-        TravellersChoiceToursComponent, RecommendedToursComponent],
+        TravellersChoiceToursComponent, RecommendedToursComponent,
+        FlexSlider],
     providers: [],
 })
 export class TourModule { }
