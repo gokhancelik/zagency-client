@@ -8,6 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { ThemeModule } from './theme';
 import { TourModule } from './tour/tour.module';
+import { TourTypeModule } from './tourType/tourType.module';
 import { SharedModule } from './shared';
 
 import { AboutComponent } from './about/about.component';
@@ -35,6 +36,7 @@ import { ContactComponent } from './contact/contact.component';
     HttpModule,
     ThemeModule,
     TourModule,
+    TourTypeModule,
     SharedModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],

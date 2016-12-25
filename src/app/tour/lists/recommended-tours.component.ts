@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { TourService, Tour } from '../../shared'
+import { TourService, TourPackage } from '../../shared'
 @Component({
     selector: 'za-recommended-tours',
     templateUrl: 'recommended-tours.component.html'
 })
 export class RecommendedToursComponent implements OnInit {
     constructor(private tourService: TourService) { }
-    list: Array<Tour> = new Array<Tour>();
+    list: Array<TourPackage> = new Array<TourPackage>();
 
 
     ngOnInit() {

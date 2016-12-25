@@ -1,0 +1,13 @@
+<h2>Hot Hotel Details</h2>
+<div class="tab-container style1 box">
+  <ul class="tabs">
+    <li *ngFor="let item of tourTypes" [ngClass]="{active: selectedTypeId===item.tourTypeId}">
+      <a (click)="changeSelectedTypeId(item.tourTypeId)" href="" data-toggle="tab">{{item.name}}</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade in active">
+      <za-tour-list-small-item [tourTypeId]="selectedTypeId"></za-tour-list-small-item>
+    </div>
+  </div>
+</div>

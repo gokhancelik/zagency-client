@@ -6,20 +6,32 @@ import { RepoBrowserComponent } from './github/repo-browser/repo-browser.compone
 import { RepoListComponent } from './github/repo-list/repo-list.component';
 import { RepoDetailComponent } from './github/repo-detail/repo-detail.component';
 import { ContactComponent } from './contact/contact.component';
+import { TourComponent } from './tour/tour.component';
+import { TourDetail1Component } from './tour/details';
+import { TourBookingComponent } from './tour/booking';
 
 export const rootRouterConfig: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'github', component: RepoBrowserComponent,
+  {
+    path: 'github', component: RepoBrowserComponent,
     children: [
       { path: '', component: RepoListComponent },
-      { path: ':org', component: RepoListComponent,
+      {
+        path: ':org', component: RepoListComponent,
         children: [
           { path: '', component: RepoDetailComponent },
           { path: ':repo', component: RepoDetailComponent }
         ]
       }]
+  },
+  {
+    path: 'tour', component: TourComponent,
+    children: [
+      { path: 'detail/:id', component: TourDetail1Component, },
+      { path: 'booking/:id', component: TourBookingComponent, }
+    ]
   },
   { path: 'contact', component: ContactComponent }
 ];

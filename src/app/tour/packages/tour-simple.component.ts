@@ -1,12 +1,12 @@
 import { Component, OnInit, Input,OnChanges } from '@angular/core';
-import { Tour } from '../../shared'
+import { TourPackage } from '../../shared'
 
 @Component({
     selector: 'za-tour-simple',
     templateUrl: 'tour-simple.component.html'
 })
 export class TourSimpleComponent implements OnInit,OnChanges {
-    @Input() tour: Tour;
+    @Input() tour: TourPackage;
     constructor() { }
 
     ngOnInit() { 

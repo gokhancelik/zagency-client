@@ -1,0 +1,154 @@
+<section id="content">
+  <div class="container tour-detail-page">
+    <div class="row" *ngIf="detail">
+      <div id="main" class="col-md-9">
+        <div class="featured-gallery image-box">
+          <span class="discount" *ngIf="detail.tourSchedule.mainPrice?.discount" style="visibility: visible;" ><span class="discount-text">{{detail.tourSchedule.mainPrice?.discount}}% Discount</span></span>
+          <img src="http://placehold.it/870x442" class="img-responsive" alt="" />
+        </div>
+        <div id="tour-details" class="travelo-box">
+          <div class="intro small-box table-wrapper full-width hidden-table-sms">
+            <div class="col-sm-4 table-cell travelo-box">
+              <dl class="term-description">
+                <dt>Locations:</dt>
+                <dd><span *ngFor="let td of detail.tourDestinations">{{td.name}}&nbsp;</span></dd>
+                <dt>Available Seats:</dt>
+                <dd>{{detail.tourSchedule.quota}}</dd>
+                <dt>Duration:</dt>
+                <dd>{{detail.tourSchedule.duration}} Day</dd>
+                <dt>Price:</dt>
+                <dd>{{detail.tourSchedule.mainPrice?.price|currency}}</dd>
+                <dt>Discount:</dt>
+                <dd>{{detail.tourSchedule.mainPrice?.discount}}% Off</dd>
+              </dl>
+            </div>
+            <div class="col-sm-8 table-cell">
+              <div class="detailed-features">
+                <div class="price-section clearfix">
+                  <div class="details">
+                    <h4 class="box-title">{{detail.tour.name}}<small>{{detail.tourSchedule.duration}} days tour</small></h4>
+                  </div>
+                  <div class="details">
+                    <span class="price">{{detail.tourSchedule.mainPrice?.price|currency}}</span>
+                   <za-booking-button [tourScheduleId]="detail.tourSchedule.tourScheduleId"></za-booking-button>
+                  </div>
+                </div>
+                <div class="flights table-wrapper">
+                  <div class="table-row">
+                    <div class="table-cell">
+                      <h4 class="box-title">Paris to Rome<small>27 Jan 2015</small></h4>
+                    </div>
+                    <div class="table-cell">
+                      <i class="icon soap-icon-plane-right take-off"></i>
+                      <dl>
+                        <dt>Departs</dt>
+                        <dd>10:00 AM</dd>
+                      </dl>
+                    </div>
+                    <div class="table-cell">
+                      <i class="icon soap-icon-plane-right landing"></i>
+                      <dl>
+                        <dt>Arrives</dt>
+                        <dd>20:40 PM</dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="table-row">
+                    <div class="table-cell">
+                      <h4 class="box-title">Rome to Paris<small>30 Jan 2015</small></h4>
+                    </div>
+                    <div class="table-cell">
+                      <i class="icon soap-icon-plane-right take-off"></i>
+                      <dl>
+                        <dt>Departs</dt>
+                        <dd>22:10 PM</dd>
+                      </dl>
+                    </div>
+                    <div class="table-cell">
+                      <i class="icon soap-icon-plane-right landing"></i>
+                      <dl>
+                        <dt>Arrives</dt>
+                        <dd>08:50 PM</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tour-google-map block"></div>
+          <h2>General Information About Tour</h2>
+          <p>{{detail.tour.description}}</p>
+          <div *ngFor="let day of detail.tourPrograms">
+            <h2>{{day.day}}</h2>
+            <p>{{day.description}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar col-md-3">
+        <div class="travelo-box">
+          <h4 class="box-title">Last Minute Deals</h4>
+          <div class="image-box style14">
+            <article class="box">
+              <figure>
+                <a href="#" title=""><img width="63" height="59" src="http://placehold.it/63x60" alt=""></a>
+              </figure>
+              <div class="details">
+                <h5 class="box-title"><a href="#">Plaza Tour Eiffel</a></h5>
+                <label class="price-wrapper"><span class="price-per-unit">$170</span>avg/night</label>
+              </div>
+            </article>
+            <article class="box">
+              <figure>
+                <a href="#" title=""><img width="63" height="59" src="http://placehold.it/63x60" alt=""></a>
+              </figure>
+              <div class="details">
+                <h5 class="box-title"><a href="#">Ocean Park Tour</a></h5>
+                <label class="price-wrapper"><span class="price-per-unit">$620</span>avg/night</label>
+              </div>
+            </article>
+            <article class="box">
+              <figure>
+                <a href="#" title=""><img width="63" height="59" src="http://placehold.it/63x60" alt=""></a>
+              </figure>
+              <div class="details">
+                <h5 class="box-title"><a href="#">Dream World Trip</a></h5>
+                <label class="price-wrapper"><span class="price-per-unit">$322</span>avg/night</label>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="travelo-box book-with-us-box">
+          <h4>Why Book with us?</h4>
+          <ul>
+            <li>
+              <i class="soap-icon-hotel-1 circle"></i>
+              <h5 class="title"><a href="#">135,00+ Hotels</a></h5>
+              <p>Nunc cursus libero pur congue arut nimspnty.</p>
+            </li>
+            <li>
+              <i class="soap-icon-savings circle"></i>
+              <h5 class="title"><a href="#">Low Rates &amp; Savings</a></h5>
+              <p>Nunc cursus libero pur congue arut nimspnty.</p>
+            </li>
+            <li>
+              <i class="soap-icon-support circle"></i>
+              <h5 class="title"><a href="#">Excellent Support</a></h5>
+              <p>Nunc cursus libero pur congue arut nimspnty.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="travelo-box contact-box">
+          <h4 class="box-title">Need Travelo Help?</h4>
+          <p>We would be more than happy to help you. Our team advisor are 24/7 at your service to help you.</p>
+          <address class="contact-details">
+            <span class="contact-phone"><i class="soap-icon-phone"></i> 1-800-123-HELLO</span>
+            <br />
+            <a href="#" class="contact-email">help@travelo.com</a>
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<pre>{{detail|json}}</pre>

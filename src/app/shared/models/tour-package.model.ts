@@ -1,4 +1,4 @@
-export class Tour {
+export class TourPackage {
     price: number;
     discount: number;
     thumbPhotoUrl: string;

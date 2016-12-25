@@ -1,4 +1,5 @@
 <article class="box">
+  <span class="discount"><span class="discount-text">{{tour.discount}}% Discount</span></span>
   <figure>
     <a href="#" class="hover-effect">
       <img [src]="tour.thumbPhotoUrl" alt="">
@@ -21,6 +22,6 @@
         <span>{{tour.startDate|date:'dd MMM yyyy'}} - {{tour.endDate|date:'dd MMM yyyy'}}</span>
       </div>
     </div>
-    <a href="#" class="button btn-small full-width">BOOK NOW</a>
+    <za-go-to-tour-detail-button [tourScheduleId]="tour.tourScheduleId" [buttonType]="2"></za-go-to-tour-detail-button>
   </div>
 </article>

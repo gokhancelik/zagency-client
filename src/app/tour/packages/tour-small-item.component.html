@@ -1,0 +1,15 @@
+<div class="row" *ngIf="tour">
+  <div class="col-xs-2">
+    <a href="" class="badge-container"><span class="badge-content">save {{tour.discount}}%</span>
+    <img class="full-width" [src]="tour.thumbPhotoUrl" [alt]="tour.tourName" width="63" height="63" /></a>
+  </div>
+  <div class="col-xs-8">
+    <h5 class="box-title">{{tour.tourName}}</h5>
+    <p class="no-margin">{{tour.description}}</p>
+  </div>
+  <div class="col-xs-2">
+    <span class="price"><small></small>{{tour.price|currency}}</span>
+    <br /><br />
+    <za-go-to-tour-detail-button [tourScheduleId]="tour.tourScheduleId" [buttonType]="1"></za-go-to-tour-detail-button>
+  </div>
+</div>

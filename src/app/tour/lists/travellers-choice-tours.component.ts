@@ -1,5 +1,5 @@
 import { Component, OnInit, Directive, ElementRef } from '@angular/core';
-import { TourService, Tour } from '../../shared'
+import { TourService, TourPackage } from '../../shared'
 
 @Component({
     selector: 'za-travellers-choice-tours',
@@ -8,7 +8,7 @@ import { TourService, Tour } from '../../shared'
 export class TravellersChoiceToursComponent implements OnInit {
     constructor(private tourService: TourService) { }
 
-    list: Array<any> = new Array<any>();
+    list: Array<TourPackage> = new Array<TourPackage>();
     ngOnInit() {
         this.tourService.getNearestTours().subscribe(data => {
             this.list = data;
