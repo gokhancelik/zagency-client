@@ -1,3 +1,4 @@
+import { TourDestinationService } from './shared/services/tourDestinations.service';
 import {Component} from '@angular/core';
 
 @Component({
@@ -5,4 +6,11 @@ import {Component} from '@angular/core';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
+  
+  constructor(private destinationService:TourDestinationService)
+  {
+    console.log(destinationService.getAll());
+  }
 }
+
+ 

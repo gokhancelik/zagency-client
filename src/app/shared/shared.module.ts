@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { TourService, TourTypeService, TourScheduleService } from './'
+import { TourDestinationService} from './'
 
 @NgModule({
     imports: [],
     exports: [],
     declarations: [],
-    providers: [TourService, TourTypeService, TourScheduleService],
+    providers: [TourDestinationService],
 })
 export class SharedModule { }
