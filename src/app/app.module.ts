@@ -18,7 +18,27 @@ import { RepoBrowserComponent } from './github/repo-browser/repo-browser.compone
 import { RepoListComponent } from './github/repo-list/repo-list.component';
 import { RepoDetailComponent } from './github/repo-detail/repo-detail.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+<<<<<<< HEAD
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+=======
+import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
+
+
+
+
+const myFirebaseAuthConfig = {
+  provider: AuthProviders.Google,
+  method: AuthMethods.Redirect
+};
+export const FIREBASE_CONFIG = {
+  apiKey: 'AIzaSyByQM2VHGOKLJdCF5fM9FJLE4NZMatHQGQ',
+  authDomain: 'zagency-9f4fe.firebaseapp.com',
+  databaseURL: 'https://zagency-9f4fe.firebaseio.com',
+  storageBucket: 'zagency-9f4fe.appspot.com',
+  messagingSenderId: '318138626852'
+};
+
+>>>>>>> ad6ef8fc4a9f30e516c6ded7849891fbe35b6032
 
 @NgModule({
   declarations: [
@@ -38,8 +58,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     TourModule,
     TourTypeModule,
     SharedModule,
+<<<<<<< HEAD
     HomeModule,
     NgbModule.forRoot(),
+=======
+    AngularFireModule.initializeApp(FIREBASE_CONFIG, myFirebaseAuthConfig),
+>>>>>>> ad6ef8fc4a9f30e516c6ded7849891fbe35b6032
     RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
   providers: [
