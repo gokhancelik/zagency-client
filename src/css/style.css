@@ -1571,18 +1571,6 @@ select option {
   min-width: 60px;
   line-height: 0;
 }
-.selector select {
-  position: absolute;
-  z-index: 1;
-  filter: alpha(opacity=0);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  -moz-opacity: 0;
-  -khtml-opacity: 0;
-  opacity: 0;
-  width: 100%;
-  -webkit-appearance: menulist-button;
-  line-height: 30px;
-}
 .selector span.custom-select {
   display: inline-block;
   line-height: 32px;
@@ -11369,7 +11357,7 @@ button.ui-button::-moz-focus-inner {
 
 /* 9.1.6. Homepage 9 */
 #content.image-bg1 {
-  background: url("http://placehold.it/2080x1362") no-repeat center center;
+  background: url("../images/homepage9_bg.jpg") no-repeat center center;
   min-height: 880px;
 }
 

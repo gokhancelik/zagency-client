@@ -3,7 +3,7 @@
     <div class="row" *ngIf="detail">
       <div id="main" class="col-md-9">
         <div class="featured-gallery image-box">
-          <span class="discount" *ngIf="detail.tourSchedule.mainPrice?.discount" style="visibility: visible;" ><span class="discount-text">{{detail.tourSchedule.mainPrice?.discount}}% Discount</span></span>
+          <span class="discount" *ngIf="detail.tourSchedule.mainPrice?.discount" style="visibility: visible;"><span class="discount-text">{{detail.tourSchedule.mainPrice?.discount}}% Discount</span></span>
           <img src="http://placehold.it/870x442" class="img-responsive" alt="" />
         </div>
         <div id="tour-details" class="travelo-box">
@@ -30,7 +30,7 @@
                   </div>
                   <div class="details">
                     <span class="price">{{detail.tourSchedule.mainPrice?.price|currency}}</span>
-                   <za-booking-button [tourScheduleId]="detail.tourSchedule.tourScheduleId"></za-booking-button>
+                    <za-booking-button [tourScheduleId]="detail.tourSchedule.tourScheduleId"></za-booking-button>
                   </div>
                 </div>
                 <div class="flights table-wrapper">
@@ -77,7 +77,7 @@
             </div>
           </div>
           <div class="tour-google-map block"></div>
-          <h2>General Information About Tour</h2>
+          <h2>General Information About {{detail.tour.name}}</h2>
           <p>{{detail.tour.description}}</p>
           <div *ngFor="let day of detail.tourPrograms">
             <h2>{{day.day}}</h2>
@@ -86,38 +86,7 @@
         </div>
       </div>
       <div class="sidebar col-md-3">
-        <div class="travelo-box">
-          <h4 class="box-title">Last Minute Deals</h4>
-          <div class="image-box style14">
-            <article class="box">
-              <figure>
-                <a href="#" title=""><img width="63" height="59" src="http://placehold.it/63x60" alt=""></a>
-              </figure>
-              <div class="details">
-                <h5 class="box-title"><a href="#">Plaza Tour Eiffel</a></h5>
-                <label class="price-wrapper"><span class="price-per-unit">$170</span>avg/night</label>
-              </div>
-            </article>
-            <article class="box">
-              <figure>
-                <a href="#" title=""><img width="63" height="59" src="http://placehold.it/63x60" alt=""></a>
-              </figure>
-              <div class="details">
-                <h5 class="box-title"><a href="#">Ocean Park Tour</a></h5>
-                <label class="price-wrapper"><span class="price-per-unit">$620</span>avg/night</label>
-              </div>
-            </article>
-            <article class="box">
-              <figure>
-                <a href="#" title=""><img width="63" height="59" src="http://placehold.it/63x60" alt=""></a>
-              </figure>
-              <div class="details">
-                <h5 class="box-title"><a href="#">Dream World Trip</a></h5>
-                <label class="price-wrapper"><span class="price-per-unit">$322</span>avg/night</label>
-              </div>
-            </article>
-          </div>
-        </div>
+        <last-reviewed-tours></last-reviewed-tours>
         <div class="travelo-box book-with-us-box">
           <h4>Why Book with us?</h4>
           <ul>

@@ -24,4 +24,17 @@ export class TourService extends BaseService {
             })
             .catch(this.handleError);
     }
+    getLastReviewedTours(): Observable<Array<TourPackage>> {
+        return this.http.get(this.API_URL + '/lastreviewedtours')
+            .map(res => {
+                let data = res.json();
+                let list: Array<TourPackage> = new Array<TourPackage>();
+                for (let i = 0; i < data.length; i++) {
+                    let t: TourPackage = new TourPackage(data[i]);
+                    list.push(t);
+                }
+                return list || {};
+            })
+            .catch(this.handleError);
+    }
 }

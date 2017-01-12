@@ -11369,7 +11369,7 @@ button.ui-button::-moz-focus-inner {
 
 /* 9.1.6. Homepage 9 */
 #content.image-bg1 {
-  background: url("http://placehold.it/2080x1362") no-repeat center center;
+  background: url("../images/homepage9_bg.jpg") no-repeat center center;
   min-height: 880px;
 }
 
