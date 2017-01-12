@@ -1,3 +1,4 @@
+import { HomeModule } from './home/home.module';
 import { ContactComponent } from './contact/contact.component';
 import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router';
@@ -13,11 +14,11 @@ import { TourTypeModule } from './tourType/tourType.module';
 import { SharedModule } from './shared';
 
 import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
 import { RepoBrowserComponent } from './github/repo-browser/repo-browser.component';
 import { RepoListComponent } from './github/repo-list/repo-list.component';
 import { RepoDetailComponent } from './github/repo-detail/repo-detail.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,6 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     RepoBrowserComponent,
     RepoListComponent,
     RepoDetailComponent,
-    HomeComponent,
     ContactComponent
   ],
   imports: [
@@ -38,6 +38,8 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     TourModule,
     TourTypeModule,
     SharedModule,
+    HomeModule,
+    NgbModule.forRoot(),
     RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
   providers: [

@@ -12737,3 +12737,7 @@ button.ui-button::-moz-focus-inner {
 .tp-simpleresponsive .slotholder, .tp-simpleresponsive .slotholder img {
   /*-webkit-backface-visibility: visible !important;-webkit-transform:none !important;*/
 }
+
+.form-control{
+  border-radius:0px;
+}
