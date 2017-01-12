@@ -7,8 +7,6 @@ import { RepoListComponent } from './github/repo-list/repo-list.component';
 import { RepoDetailComponent } from './github/repo-detail/repo-detail.component';
 import { ContactComponent } from './contact/contact.component';
 import { TourComponent } from './tour/tour.component';
-import { TourDetail1Component } from './tour/details';
-import { TourBookingComponent } from './tour/booking';
 
 export const rootRouterConfig: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -26,13 +24,13 @@ export const rootRouterConfig: Routes = [
         ]
       }]
   },
-  {
-    path: 'tour', component: TourComponent,
-    children: [
-      { path: 'detail/:id', component: TourDetail1Component, },
-      { path: 'booking/:id', component: TourBookingComponent, }
-    ]
-  },
+    // {
+    //   path: 'tour', component: TourComponent,
+    //   children: [
+    //     { path: 'detail/:id', component: TourDetail1Component, },
+    //     { path: 'booking/:id', component: TourBookingComponent, }
+    //   ]
+    // },
   { path: 'contact', component: ContactComponent }
 ];
 

@@ -1,1 +1,1 @@
-export * from './tour-detail1.component'
+// export * from './tour-detail1.component'
